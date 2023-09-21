@@ -47,7 +47,7 @@ In GitHub create the repository : experiment_git_for_tdd
 <code>git branch -M main</code><br>
 <code>git push -u origin master"</code>
 
-### Step 1 -- Create a new branch and merge it without delete the branch
+### Step 1 -- Create a new branch and merge it without deleting the branch
 
 <code>git checkout -b branch_1</code><br>
 <code>Create file called file1</code><br>
@@ -58,12 +58,10 @@ In GitHub create the repository : experiment_git_for_tdd
 #### Step 1a 
 <code>git checkout main</code>
 <code>git merge branch_1</code>
-<code>git merge --no-ff</code>
 
-### Step 2 
-<code>git checkout -b branch_2 from branch_1 </code><br>
-<code>Create file called file2</code><br>
-<code>Using git add/commit/push the changes</code>
+### Step 2  -- Create a second branch and merge it without deleting the branch
+use branch_name : branch_2
+use filename    : file2
 
 ### Step 3
 <code>git checkout -b branch_3 from branch_2 </code><br>
