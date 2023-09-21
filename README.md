@@ -47,11 +47,18 @@ In GitHub create the repository : experiment_git_for_tdd
 <code>git branch -M main</code><br>
 <code>git push -u origin master"</code>
 
-### Step 1
+### Step 1 -- Create a new branch and merge it without delete the branch
 
 <code>git checkout -b branch_1</code><br>
 <code>Create file called file1</code><br>
-<code>Using git add/commit/push the changes</code>
+<code>git add -A </code>
+<code>git commit -m "Working on Step 1 Experiment ( See Readme.md )"</code>
+<code>git push --set-upstream origin branch_1</code>
+
+#### Step 1a 
+<code>git checkout main</code>
+<code>git merge branch_1</code>
+<code>git merge --no-ff</code>
 
 ### Step 2 
 <code>git checkout -b branch_2 from branch_1 </code><br>
