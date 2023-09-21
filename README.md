@@ -75,5 +75,14 @@ In GitHub create the repository : experiment_git_for_tdd
 <code>Make a change to the file</file><br>
 <code>Use an alias / python program / ansible to do a git pull and push</code>
 
+## Lessons 
+
+### Adding a file to a push repository and not changing the commit message
+<ol>
+    <li><code>Use git add to add the files</code></li>
+    <li><code>git commit -amend --no-edit</code></li>
+    <li><code>git push --force</code></li>
+</ol>
+
 
 
