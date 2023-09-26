@@ -56,14 +56,27 @@ In GitHub create the repository : experiment_git_for_tdd
 <code>git push --set-upstream origin branch_1</code>
 
 #### Step 1a 
-<code>git checkout main</code>
-<code>git merge branch_1</code>
-<code>git merge --no-ff</code>
+<code>git checkout main</code><br>
+<code>git merge branch_1</code><br>
+<code>git merge --no-ff</code><br>
 <code>git push</code>
 
 ### Step 2  -- Create a second branch and merge it without deleting the branch
 use branch_name : branch_2
 use filename    : file2
+
+<code>git checkout -b branch2</code>
+<code>Create a file called file2</code>
+<code>git add -A </code>
+<code>git commit -m "Working on Step 1 Experiment ( See Readme.md )"</code>
+<code>git push --set-upstream origin branch_1</code>
+
+#### Step 2a
+<code>git checkout main</code><br>
+<code>git merge branch_2</code><br>
+<code>git merge --no-ff</code><br>
+<code>git push</code>
+
 
 ### Step 3 -- Recreate the directory structure of step 1
 <code>git checkout branch_1</code>
@@ -74,14 +87,14 @@ use filename    : file2
 <code>git checkout branch_2</code>
 
 ### Step 5 -- See if an change from an earlier branch can be merged into a new branch
-<code>git checkout branch_1</code>
-<code>edit file1<code>
-<code>git add file1</b>
-<code>git commit -m "Made change to file1"</code>
-<code>git push</b>
+<code>git checkout branch_1</code><br>
+<code>edit file1</code><br>
+<code>git add file1</code><br>
+<code>git commit -m "Made change to file1"</code><br>
+<code>git push</b><br>
 
-<code>git checkout branch_2</code>
-<code>git merge branch_1</code>
+<code>git checkout branch_2</code><br>
+<code>git merge branch_1</code><br>
 
 Verify branch2 has the change for branch1
 
@@ -97,12 +110,22 @@ Verify branch2 has the change for branch1
 ### Switching to a branch and getting the exact files that in the last commit on that brancbh
 <code>git checkout <branch_name></code>
 
-*Note* Untracked File will be in the directory no matter which branch is chosen.
+**Note** Untracked File will be in the directory no matter which branch is chosen.
 
 ### Can Merge one branch into another
 <code>git checkout <new branch><code>
 <code>git merge <different_branch></code>
->>>>>>> branch_1
 
+# Further step
+
+<p>A script is needed when you want to update a previous branch merge the changes into 
+the branches created after the previous branch.</p>
+
+<ol>
+    <li>input a branch name</li>
+    <li>Get a ordered list of branches by creation data</li>
+    <li>From the list of branches find the index of branched mentioned in step 1</li>
+    <li>From index + 1 to end of list merge the branh name </li>
+</ol>
 
 
