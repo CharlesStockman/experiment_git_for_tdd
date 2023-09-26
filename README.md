@@ -58,27 +58,32 @@ In GitHub create the repository : experiment_git_for_tdd
 #### Step 1a 
 <code>git checkout main</code>
 <code>git merge branch_1</code>
+<code>git merge --no-ff</code>
+<code>git push</code>
 
 ### Step 2  -- Create a second branch and merge it without deleting the branch
 use branch_name : branch_2
 use filename    : file2
 
-### Step 3
-<code>git checkout -b branch_3 from branch_2 </code><br>
-<code>Create file called file3</code><br>
-<code>Using git add/commit/push the changes</code>
+### Step 3 -- Recreate the directory structure of step 1
+<code>git checkout branch_1</code>
 
-### Step 4
-<code>git checkout -b branch_4 from branch_3 </code><br>
-<code>Create file called file4</code><br>
-<code>Using git add/commit/push the changes</code>
+### Step 4 -- Add an untracked file to branch 2 and then checkout branch 1 
+<code>git checkout branch_1</code>
+<code>touch untrackedFile</code>
+<code>git checkout branch_2</code>
 
-<b>Summary --</b> You should have four branches where each successive branch is descendent from the other
+### Step 5 -- See if an change from an earlier branch can be merged into a new branch
+<code>git checkout branch_1</code>
+<code>edit file1<code>
+<code>git add file1</b>
+<code>git commit -m "Made change to file1"</code>
+<code>git push</b>
 
-### Step 5
-<code>git checkout branch_1</code><br>
-<code>Make a change to the file</file><br>
-<code>Use an alias / python program / ansible to do a git pull and push</code>
+<code>git checkout branch_2</code>
+<code>git merge branch_1</code>
+
+Verify branch2 has the change for branch1
 
 ## Lessons 
 
@@ -88,6 +93,16 @@ use filename    : file2
     <li><code>git commit -amend --no-edit</code></li>
     <li><code>git push --force</code></li>
 </ol>
+
+### Switching to a branch and getting the exact files that in the last commit on that brancbh
+<code>git checkout <branch_name></code>
+
+*Note* Untracked File will be in the directory no matter which branch is chosen.
+
+### Can Merge one branch into another
+<code>git checkout <new branch><code>
+<code>git merge <different_branch></code>
+>>>>>>> branch_1
 
 
 
