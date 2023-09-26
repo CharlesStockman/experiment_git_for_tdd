@@ -70,12 +70,16 @@ In GitHub create the repository : experiment_git_for_tdd
 <code>Create file called file3</code><br>
 <code>Using git add/commit/push the changes</code>
 
-### Step 4
-<code>git checkout -b branch_4 from branch_3 </code><br>
-<code>Create file called file4</code><br>
-<code>Using git add/commit/push the changes</code>
+### Step 5 -- See if an change from an earlier branch can be merged into a new branch
+<code>git checkout branch_1</code>
+<code>edit file1<code>
+<code>git add file1</b>
+<code>git commit -m "Made change to file1"</code>
+<code>git push</b>
 
-<b>Summary --</b> You should have four branches where each successive branch is descendent from the other
+<code>git checkout branch_2</code>
+
+Verify branch2 has the change for branch1
 
 ### Step 5
 <code>git checkout branch_1</code><br>
