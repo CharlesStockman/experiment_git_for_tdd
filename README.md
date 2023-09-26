@@ -58,17 +58,25 @@ In GitHub create the repository : experiment_git_for_tdd
 #### Step 1a 
 <code>git checkout main</code>
 <code>git merge branch_1</code>
+<<<<<<< Updated upstream
 <code>git merge --no-ff</code>
+=======
+<code>git push</code>
+>>>>>>> Stashed changes
 
 ### Step 2 
 <code>git checkout -b branch_2 from branch_1 </code><br>
 <code>Create file called file2</code><br>
 <code>Using git add/commit/push the changes</code>
 
-### Step 3
-<code>git checkout -b branch_3 from branch_2 </code><br>
-<code>Create file called file3</code><br>
-<code>Using git add/commit/push the changes</code>
+### Step 3 -- Recreate the directory structure of step 1
+<code>git checkout branch_1</code>
+
+### Step 4 -- Add an untracked file to branch 2 and then checkout branch 1 
+<code>git checkout branch_2</code>
+<code>touch untrackedFile</code>
+<code>git checkout branch_1</code>
+
 
 ### Step 5 -- See if an change from an earlier branch can be merged into a new branch
 <code>git checkout branch_1</code>
@@ -78,13 +86,9 @@ In GitHub create the repository : experiment_git_for_tdd
 <code>git push</b>
 
 <code>git checkout branch_2</code>
+<code>git merge</code>
 
 Verify branch2 has the change for branch1
-
-### Step 5
-<code>git checkout branch_1</code><br>
-<code>Make a change to the file</file><br>
-<code>Use an alias / python program / ansible to do a git pull and push</code>
 
 ## Lessons 
 
@@ -94,6 +98,13 @@ Verify branch2 has the change for branch1
     <li><code>git commit -amend --no-edit</code></li>
     <li><code>git push --force</code></li>
 </ol>
+
+### Switching to a branch
+<code>git checkout <branch_name></code>
+
+### Can Merge one branch into another
+<code>git checkout <new branch><code>
+<code>git merge <different_branch></code>
 
 
 
