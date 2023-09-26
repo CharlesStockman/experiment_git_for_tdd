@@ -47,7 +47,7 @@ In GitHub create the repository : experiment_git_for_tdd
 <code>git branch -M main</code><br>
 <code>git push -u origin master"</code>
 
-### Step 1 -- Create a new branch and merge it without delete the branch
+### Step 1 -- Create a new branch and merge it without deleting the branch
 
 <code>git checkout -b branch_1</code><br>
 <code>Create file called file1</code><br>
@@ -58,25 +58,20 @@ In GitHub create the repository : experiment_git_for_tdd
 #### Step 1a 
 <code>git checkout main</code>
 <code>git merge branch_1</code>
-<<<<<<< Updated upstream
 <code>git merge --no-ff</code>
-=======
 <code>git push</code>
->>>>>>> Stashed changes
 
-### Step 2 
-<code>git checkout -b branch_2 from branch_1 </code><br>
-<code>Create file called file2</code><br>
-<code>Using git add/commit/push the changes</code>
+### Step 2  -- Create a second branch and merge it without deleting the branch
+use branch_name : branch_2
+use filename    : file2
 
 ### Step 3 -- Recreate the directory structure of step 1
 <code>git checkout branch_1</code>
 
 ### Step 4 -- Add an untracked file to branch 2 and then checkout branch 1 
-<code>git checkout branch_2</code>
-<code>touch untrackedFile</code>
 <code>git checkout branch_1</code>
-
+<code>touch untrackedFile</code>
+<code>git checkout branch_2</code>
 
 ### Step 5 -- See if an change from an earlier branch can be merged into a new branch
 <code>git checkout branch_1</code>
@@ -86,7 +81,7 @@ In GitHub create the repository : experiment_git_for_tdd
 <code>git push</b>
 
 <code>git checkout branch_2</code>
-<code>git merge</code>
+<code>git merge branch_1</code>
 
 Verify branch2 has the change for branch1
 
@@ -99,12 +94,15 @@ Verify branch2 has the change for branch1
     <li><code>git push --force</code></li>
 </ol>
 
-### Switching to a branch
+### Switching to a branch and getting the exact files that in the last commit on that brancbh
 <code>git checkout <branch_name></code>
+
+*Note* Untracked File will be in the directory no matter which branch is chosen.
 
 ### Can Merge one branch into another
 <code>git checkout <new branch><code>
 <code>git merge <different_branch></code>
+>>>>>>> branch_1
 
 
 
