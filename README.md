@@ -51,9 +51,9 @@ In GitHub create the repository : experiment_git_for_tdd
 
 <code>git checkout -b branch_1</code><br>
 <code>Create file called file1</code><br>
-<code>git add -A </code>
-<code>git commit -m "Working on Step 1 Experiment ( See Readme.md )"</code>
-<code>git push --set-upstream origin branch_1</code>
+<code>git add -A </code><br>
+<code>git commit -m "Working on Step 1 Experiment ( See Readme.md )"</code><br>
+<code>git push --set-upstream origin branch_1</code><br>
 
 #### Step 1a 
 <code>git checkout main</code><br>
@@ -91,7 +91,7 @@ use filename    : file2
 <code>edit file1</code><br>
 <code>git add file1</code><br>
 <code>git commit -m "Made change to file1"</code><br>
-<code>git push</b><br>
+<code>git push</code><br>
 
 <code>git checkout branch_2</code><br>
 <code>git merge branch_1</code><br>
@@ -107,21 +107,31 @@ Verify branch2 has the change for branch1
     <li><code>git push --force</code></li>
 </ol>
 
-### Switching to a branch and getting the exact files that in the last commit on that brancbh
+### Switching to a branch and getting the exact files that in the last commit on that branch
 <code>git checkout <branch_name></code>
 
 **Note** Untracked File will be in the directory no matter which branch is chosen.
 
 ### Can Merge one branch into another
-<code>git checkout <new branch><code>
+<code>git checkout <new branch></code><br>
 <code>git merge <different_branch></code>
 
-# Further step
+# Further steps
 
 <p>A script is needed when you want to update a previous branch merge the changes into 
 the branches created after the previous branch.</p>
 
+## Python Libraries
+| Library | Notes |
+| --------|-------|
+| Git Python | https://github.com/gitpython-developers/GitPython |
+
+## Ansible 
+| Playbook | Notes |                                                                                                                       | 
+| https://docs.ansible.com/ansible/latest/collections/ansible/builtin/git_module.html | Mange git checkouts of repositories to deploy files  |
+
 <ol>
+    <li>Determine if the path is a git repository</li>
     <li>input a branch name</li>
     <li>Get a ordered list of branches by creation data</li>
     <li>From the list of branches find the index of branched mentioned in step 1</li>
